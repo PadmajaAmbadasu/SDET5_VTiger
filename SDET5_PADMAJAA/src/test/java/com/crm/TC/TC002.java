@@ -1,11 +1,9 @@
 package com.crm.TC;
 
 import java.io.IOException;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import com.VTigerr.genericLib.WebDriverUtils;
 import com.objectRepo.BaseClass;
 import com.objectRepo.CreateOrgInfo;
@@ -30,7 +28,7 @@ public class TC002 extends BaseClass {
 		newOrgPage.getorgnametxtbox().sendKeys(orgname);
 
 		newOrgPage.getSaveorgbtn().click();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 
 		home.getOrgModule().click();
 
@@ -43,7 +41,7 @@ public class TC002 extends BaseClass {
 		String act_orgname= orgInfo.getSearchOrg().getText();
 		Assert.assertEquals(act_orgname, orgname);
 	}
-	@Test(groups = "integration", enabled=false)
+	@Test(groups = "integration")
 	public void createorgwithmobilenoTest() throws InterruptedException, IOException 
 	{
 
@@ -64,10 +62,14 @@ public class TC002 extends BaseClass {
 
 		home.getOrganizationbtn().click();
 		orgInfo.searchForOrganisation(orgname, "accountname");
+		Thread.sleep(3000);
+		WebDriverUtils driverUtils=new WebDriverUtils(driver);
+		driverUtils.waitforelement(orgInfo.getSearchOrg());
+		
+		String act_orgname= orgInfo.getSearchOrg().getText();
+		Assert.assertEquals(act_orgname, orgname);
 
-		String actual_orgname=	driver.findElement(By.xpath("//a[@title='Organizations']")).getText();
-
-		Assert.assertEquals(actual_orgname, orgname);
+		
 	}
 
 }

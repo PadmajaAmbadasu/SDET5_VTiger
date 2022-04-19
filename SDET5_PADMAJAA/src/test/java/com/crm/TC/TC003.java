@@ -1,11 +1,10 @@
 package com.crm.TC;
 	
 import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import com.VTigerr.genericLib.WebDriverUtils;
 import com.VTigerr.genericLib.fake_Data;
 import com.objectRepo.BaseClass;
@@ -13,7 +12,7 @@ import com.objectRepo.ContactsInfo;
 import com.objectRepo.CreateCntInfo;
 import com.objectRepo.HomePage;
 import com.objectRepo.SearchOrgPopup;
-
+@Listeners(com.VTigerr.genericLib.MyListeners.class)
 public class TC003 extends BaseClass{
 
 	@Test (groups = "integration")
