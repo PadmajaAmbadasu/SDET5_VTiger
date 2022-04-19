@@ -2,39 +2,68 @@
 <testng-results ignored="1" total="2" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-19T11:16:25 IST" name="Default suite" finished-at="2022-04-19T11:16:45 IST" duration-ms="19271">
+  <suite started-at="2022-04-19T12:36:33 IST" name="Default suite" finished-at="2022-04-19T12:37:05 IST" duration-ms="32353">
     <groups>
       <group name="integration">
-        <method signature="TC001.deleteOrgTest()[pri:0, instance:com.crm.TC.TC001@5d7148e2]" name="deleteOrgTest" class="com.crm.TC.TC001"/>
+        <method signature="TC003.createcontactwithorg()[pri:0, instance:com.crm.TC.TC003@543588e6]" name="createcontactwithorg" class="com.crm.TC.TC003"/>
       </group> <!-- integration -->
     </groups>
-    <test started-at="2022-04-19T11:16:25 IST" name="Default test" finished-at="2022-04-19T11:16:45 IST" duration-ms="19271">
-      <class name="com.crm.TC.TC001">
-        <test-method is-config="true" signature="beforesuite()[pri:0, instance:com.crm.TC.TC001@5d7148e2]" started-at="2022-04-19T11:16:25 IST" name="beforesuite" finished-at="2022-04-19T11:16:25 IST" duration-ms="5" status="PASS">
+    <test started-at="2022-04-19T12:36:33 IST" name="Default test" finished-at="2022-04-19T12:37:05 IST" duration-ms="32353">
+      <class name="com.crm.TC.TC003">
+        <test-method is-config="true" signature="beforesuite()[pri:0, instance:com.crm.TC.TC003@543588e6]" started-at="2022-04-19T12:36:33 IST" name="beforesuite" finished-at="2022-04-19T12:36:33 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforesuite -->
-        <test-method is-config="true" signature="beforeclass()[pri:0, instance:com.crm.TC.TC001@5d7148e2]" started-at="2022-04-19T11:16:25 IST" name="beforeclass" finished-at="2022-04-19T11:16:27 IST" duration-ms="1445" status="PASS">
+        <test-method is-config="true" signature="beforeclass()[pri:0, instance:com.crm.TC.TC003@543588e6]" started-at="2022-04-19T12:36:33 IST" name="beforeclass" finished-at="2022-04-19T12:36:34 IST" duration-ms="1475" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeclass -->
-        <test-method is-config="true" signature="logintoVtiger()[pri:0, instance:com.crm.TC.TC001@5d7148e2]" started-at="2022-04-19T11:16:27 IST" name="logintoVtiger" finished-at="2022-04-19T11:16:30 IST" duration-ms="3079" status="PASS">
+        <test-method is-config="true" signature="logintoVtiger()[pri:0, instance:com.crm.TC.TC003@543588e6]" started-at="2022-04-19T12:36:34 IST" name="logintoVtiger" finished-at="2022-04-19T12:36:40 IST" duration-ms="5263" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintoVtiger -->
-        <test-method signature="deleteOrgTest()[pri:0, instance:com.crm.TC.TC001@5d7148e2]" started-at="2022-04-19T11:16:30 IST" name="deleteOrgTest" finished-at="2022-04-19T11:16:43 IST" duration-ms="13251" status="FAIL">
-          <exception class="java.lang.Error">
+        <test-method signature="createcontactwithorg()[pri:0, instance:com.crm.TC.TC003@543588e6]" started-at="2022-04-19T12:36:40 IST" name="createcontactwithorg" finished-at="2022-04-19T12:37:03 IST" duration-ms="23079" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Unresolved compilation problem: 
-The method until(ExpectedCondition<WebElement>) is undefined for the type WebDriver.Timeouts
-]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@class='txtBox']"}
+  (Session info: chrome=100.0.4896.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OVBCR4D3', ip: '192.168.60.198', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.88, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\PADMAJ~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56699}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8a1e2620838079c1d09458b514f959c6
+*** Element info: {Using=xpath, value=//input[@class='txtBox']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problem: 
-The method until(ExpectedCondition<WebElement>) is undefined for the type WebDriver.Timeouts
-
-at com.VTigerr.genericLib.WebDriverUtils.waitforelement(WebDriverUtils.java:104)
-at com.crm.TC.TC001.deleteOrgTest(TC001.java:80)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@class='txtBox']"}
+  (Session info: chrome=100.0.4896.88)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LAPTOP-OVBCR4D3', ip: '192.168.60.198', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.88, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\PADMAJ~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56699}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8a1e2620838079c1d09458b514f959c6
+*** Element info: {Using=xpath, value=//input[@class='txtBox']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
+at com.crm.TC.TC003.createcontactwithorg(TC003.java:32)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -65,42 +94,45 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteOrgTest -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:com.crm.TC.TC001@5d7148e2]" started-at="2022-04-19T11:16:43 IST" name="logout" finished-at="2022-04-19T11:16:45 IST" duration-ms="1280" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.crm.TC.TC001@5d7148e2]" started-at="2022-04-19T11:16:45 IST" name="afterClass" finished-at="2022-04-19T11:16:45 IST" duration-ms="24" status="FAIL">
-          <exception class="org.openqa.selenium.UnhandledAlertException">
+        </test-method> <!-- createcontactwithorg -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:com.crm.TC.TC003@543588e6]" started-at="2022-04-19T12:37:03 IST" name="logout" finished-at="2022-04-19T12:37:05 IST" duration-ms="2489" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
-              <![CDATA[unexpected alert open: {Alert text : undefined}
-  (Session info: chrome=100.0.4896.88): undefined
+              <![CDATA[element not interactable: http://localhost:8888/index.php?module=Users&action=Logout has no size and location
+  (Session info: chrome=100.0.4896.88)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-OVBCR4D3', ip: '192.168.60.198', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.88, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\PADMAJ~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53064}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 304296c4931572c6b6db4ec09888dfe7]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.88, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\PADMAJ~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56699}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8a1e2620838079c1d09458b514f959c6]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : undefined}
-  (Session info: chrome=100.0.4896.88): undefined
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable: http://localhost:8888/index.php?module=Users&action=Logout has no size and location
+  (Session info: chrome=100.0.4896.88)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'LAPTOP-OVBCR4D3', ip: '192.168.60.198', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.88, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\PADMAJ~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53064}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 304296c4931572c6b6db4ec09888dfe7
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.88, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\PADMAJ~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56699}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8a1e2620838079c1d09458b514f959c6
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-at com.VTigerr.genericLib.WebDriverUtils.closeBrowser(WebDriverUtils.java:93)
-at com.objectRepo.BaseClass.afterClass(BaseClass.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:618)
+at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:639)
+at com.VTigerr.genericLib.WebDriverUtils.movetoElement(WebDriverUtils.java:85)
+at com.objectRepo.HomePage.logoutfromApp(HomePage.java:80)
+at com.objectRepo.BaseClass.logout(BaseClass.java:76)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -109,8 +141,15 @@ at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelpe
 at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
 at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
 at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:217)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:130)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.runAfterGroupsConfigurations(TestInvoker.java:676)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:660)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 at org.testng.TestRunner.privateRun(TestRunner.java:794)
 at org.testng.TestRunner.run(TestRunner.java:596)
@@ -129,15 +168,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.crm.TC.TC003@543588e6]" started-at="2022-04-19T12:37:05 IST" name="afterClass" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1650352025587" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.crm.TC.TC001@5d7148e2]" started-at="2022-04-19T11:16:45 IST" name="afterSuite" finished-at="2022-04-19T11:16:45 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:com.crm.TC.TC003@543588e6]" started-at="2022-04-19T12:37:05 IST" name="afterSuite" finished-at="2022-04-19T12:37:05 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- com.crm.TC.TC001 -->
+      </class> <!-- com.crm.TC.TC003 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
