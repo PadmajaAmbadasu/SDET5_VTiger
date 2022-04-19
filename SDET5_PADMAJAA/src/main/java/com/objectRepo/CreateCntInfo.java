@@ -10,16 +10,20 @@ public class CreateCntInfo {
 	
 	
 	WebDriver driver;
+	@FindBy(name="salutationtype")
+	private WebElement ContSelByValDD;
+	
+	@FindBy(name="firstname")
+	private WebElement contactFirstNmTxtb;
 	
 	@FindBy(name="lastname")
-	private WebElement lastnametxt;
+	private WebElement contactLoststNmTxtb;
 	
+	@FindBy(css="img[title='Select']")
+	private WebElement selectOrgNmInCnts;
 	
-	@FindBy(xpath="//input[@value='  Save  ']")
+	@FindBy(name="button")
 	private WebElement savebtn;
-	
-	@FindBy(xpath="//img[@title='Select']")
-	private WebElement plusbtn;
 	
 	public  CreateCntInfo(WebDriver driver)
 	{
@@ -27,28 +31,30 @@ public class CreateCntInfo {
 		PageFactory.initElements(driver, this);
 		
 	}
-
+	
 	public WebDriver getDriver() {
 		return driver;
 	}
 
-	public WebElement getLastnametxt() {
-		return lastnametxt;
+	public WebElement getContSelByValDD() {
+		return ContSelByValDD;
+	}
+
+	public WebElement getContactFirstNmTxtb() {
+		return contactFirstNmTxtb;
+	}
+
+	public WebElement getContactLoststNmTxtb() {
+		return contactLoststNmTxtb;
+	}
+
+	public WebElement getSelectOrgNmInCnts() {
+		return selectOrgNmInCnts;
 	}
 
 	public WebElement getSavebtn() {
 		return savebtn;
 	}
 
-	public WebElement getPlusbtn() {
-		return plusbtn;
-	}
-
-	public WebElement getCreatecontactsimg() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	
+		
 }

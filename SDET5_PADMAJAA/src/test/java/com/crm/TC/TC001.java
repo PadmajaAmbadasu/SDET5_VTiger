@@ -65,10 +65,9 @@ public class TC001  extends BaseClass
 		newOrgPage.getSaveorgbtn().click();
 		Thread.sleep(3000);
 
-		home.getOrganizationbtn().click();
-		orgInfo.getSearchbtn();
-
-		//orgInfo.getSearchbtn(orgname, "accountname");
+		home.getOrgModule().click();
+		
+		orgInfo.searchForOrganisation(orgname, "accountname");
 		Thread.sleep(3000);
 		
 		orgInfo.getFirstcheckbox().click();
@@ -79,12 +78,9 @@ public class TC001  extends BaseClass
 		//Thread.sleep(3000);
 		driverUtils.waitforelement(orgInfo.getnoOrgfound());
 		newOrgPage.getOrgvalDD();
-		String msg= orgInfo.getSearchtxt().getText();
+		String msg= orgInfo.getnoOrgfound().getText();
 	
-        Assert.assertEquals(msg, "No Organization Found!");
+        Assert.assertEquals(msg, "No Organization Found !");
        
 
-	
-		
-
-	}}
+		}}

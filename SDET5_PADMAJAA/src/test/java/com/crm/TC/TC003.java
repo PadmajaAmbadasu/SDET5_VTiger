@@ -20,7 +20,7 @@ public class TC003 extends BaseClass{
 	public void createcontactwithorg() throws Throwable 
 	{
 		HomePage home=new HomePage(driver);
-		home.getContactsctn().click();
+		home.getContactsbtn().click();
 
 		//Testcase3
 
@@ -44,7 +44,7 @@ public class TC003 extends BaseClass{
 		contactPage.getSearchbtn().click();
 
 		Thread.sleep(3000);
-		home.getContactsctn().click();
+		home.getContactsbtn().click();
 
 		//validation
 		contactPage.checkcontactcreated(contactname, "Last Name");
@@ -60,21 +60,21 @@ public class TC003 extends BaseClass{
 	public void createcontact() throws InterruptedException, IOException
 	{
 		HomePage homePage = new HomePage(driver);
-		homePage.getContactsctn().click();
+		homePage.getContactsbtn().click();
 
 		CreateCntInfo  contactPage = new CreateCntInfo(driver);
-		contactPage.getCreatecontactsimg().click();
+		contactPage.getSelectOrgNmInCnts().click();
 
 		CreateCntInfo  contactPage1 = new CreateCntInfo(driver);
 
 		fake_Data fake_Data = new fake_Data();
 		String contactname=fake_Data.firstName();
-		contactPage1.getLastnametxt().sendKeys(contactname);
+		contactPage1.getContactLoststNmTxtb().sendKeys(contactname);
 		
 		contactPage1.getSavebtn().click();
 
 		Thread.sleep(3000);
-		homePage.getContactsctn().click();
+		homePage.getContactsbtn().click();
 
 	//	contactsInfo.checkcontactcreated(contactname, "Last Name");
 
