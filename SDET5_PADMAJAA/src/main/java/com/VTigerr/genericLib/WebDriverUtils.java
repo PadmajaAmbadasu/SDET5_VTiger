@@ -7,9 +7,11 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Timeouts;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -90,15 +92,17 @@ public class WebDriverUtils
 	public void closeBrowser() {
 		driver.close();
 	}
-//	/**
-//	 * This method is for explicit wait
-//	 * @param element
-//	 */
-//		public void waitforelement(WebElement element)
-//		{
-//			WebDriverWait wait = new WebDriverWait(driver, 15,TimeUnit.SECONDS);
-//			wait.until(ExpectedConditions.visibilityOf(element));
-//		}
+	/**
+	 * This method is for explicit wait
+	 * @param element
+	 */
+		public void waitforelement(WebElement element)
+		{
+			
+			Timeouts wait = driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
+			//WebDriverWait wait = (driver, 15,TimeUnit.SECONDS);
+		// wait.until(ExpectedConditions.visibilityOf(element));
+		}
 
 	/**
 	 * 

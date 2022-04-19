@@ -36,7 +36,15 @@ public class CreateOrgInfo {
 	
 	@FindBy(id="bas_searchfield")
 	private WebElement OrgvalDD;
-	public WebElement getOrgvalDD() {
+	
+	@FindBy (xpath="//input[@name='search_text']")
+	private WebElement searchorgTest;
+	
+	public WebElement getSearchorgTest() {
+		return searchorgTest;
+	}
+
+		public WebElement getOrgvalDD() {
 		return OrgvalDD;
 	}
 

@@ -29,10 +29,10 @@ public class TC001  extends BaseClass
 		String orgname=data.orgName();
 		newOrgPage.getorgnametxtbox().sendKeys(orgname);
 		
-        WebDriverUtils driverUtil=new WebDriverUtils(driver);
-		driverUtil.selectValuefromDD(newOrgPage.getIndustry(),"Chemicals");
-		driverUtil.selectValuefromDD(newOrgPage.getRating(),"Active");
-		driverUtil.selectValuefromDD(newOrgPage.getType(),"Customer");
+        WebDriverUtils driverUtils=new WebDriverUtils(driver);
+		driverUtils.selectValuefromDD(newOrgPage.getIndustry(),"Chemicals");
+		driverUtils.selectValuefromDD(newOrgPage.getRating(),"Active");
+		driverUtils.selectValuefromDD(newOrgPage.getType(),"Customer");
 
 		newOrgPage.getSaveorgbtn().click();
 		Thread.sleep(3000);
@@ -74,12 +74,14 @@ public class TC001  extends BaseClass
 		orgInfo.getFirstcheckbox().click();
 		orgInfo.getDeletebtn().click();
 		
-		WebDriverUtils driverUtil=new WebDriverUtils(driver);
-		driverUtil.acceptAlert();
-		// driverUtils.waitforelement(orgInfo.getnoOrgfound());
-		String msg= orgInfo.getnoOrgfound().getText();
-		
-        Assert.assertEquals(msg, orgname, "No Organization Found!");
+		WebDriverUtils driverUtils=new WebDriverUtils(driver);
+		driverUtils.acceptAlert();
+		//Thread.sleep(3000);
+		driverUtils.waitforelement(orgInfo.getnoOrgfound());
+		newOrgPage.getOrgvalDD();
+		String msg= orgInfo.getSearchtxt().getText();
+	
+        Assert.assertEquals(msg, "No Organization Found!");
        
 
 	
