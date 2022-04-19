@@ -28,6 +28,14 @@ public class OrganizationInfo {  //Rule1:class name should be pagename
 	@FindBy(xpath="//table[@class=\"lvt small\"]//tr[3]//input[@name=\"selected_id\" and @type=\"checkbox\"]")
 	private WebElement firstcheckbox;
 	
+	@FindBy (xpath="//a[@title='Organizations']")
+	private WebElement searchOrg;
+	
+	public WebElement getSearchOrg() {
+		return searchOrg;
+	}
+
+	
 	public WebElement getOrgSelByValDD() {
 		return OrgSelByValDD;
 	}

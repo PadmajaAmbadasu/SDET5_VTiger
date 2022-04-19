@@ -33,7 +33,25 @@ public class CreateOrgInfo {
 	@FindBy(xpath="//input[@title='Save [Alt+S]']")
 	private WebElement saveorgbtn;
 
-	
+	public WebDriver getDriver() {
+		return driver;
+	}
+
+	public WebElement getOrgnametxtbox() {
+		return orgnametxtbox;
+	}
+
+	public WebElement getIndustrydd() {
+		return industrydd;
+	}
+
+	public WebElement getTypedd() {
+		return typedd;
+	}
+
+	public WebElement getRatingdd() {
+		return ratingdd;
+	}
 	@FindBy(id="bas_searchfield")
 	private WebElement OrgvalDD;
 	
